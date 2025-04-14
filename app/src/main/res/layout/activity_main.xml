@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#d3d4d7">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Budget Calculator"
+        android:textColor="#101011"
+        android:textSize="25sp"
+        />
+
+    <TextView
+        android:id="@+id/tvInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="36sp"
+        android:textColor="#101011"
+        android:gravity="end"
+        android:padding="24dp"
+        android:maxLines="2"
+        android:background="@drawable/textview_border" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/etLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Label (e.g. Rent)"
+            android:padding="12dp"
+            android:background="@drawable/textview_border"
+            android:textColor="#000000"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log"
+            android:padding="12dp"
+            android:backgroundTint="#00008B"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="355dp"
+        android:layout_weight="1"
+        android:alignmentMode="alignMargins"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:useDefaultMargins="true">
+
+        <!-- Row 1 -->
+        <Button
+            android:id="@+id/btnClear"
+            android:backgroundTint="#8B0000"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:backgroundTint="#3e3f44"
+            android:text="←" />
+
+        <Button
+            android:id="@+id/btnPercent"
+            android:backgroundTint="#3e3f44"
+            android:text="%" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            android:backgroundTint="#3e3f44"
+            android:text="÷" />
+
+        <!-- Row 2 -->
+        <Button
+            android:id="@+id/btn7"
+            android:backgroundTint="#3e3f44"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:backgroundTint="#3e3f44"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:backgroundTint="#3e3f44"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btnMultiply"
+            android:backgroundTint="#3e3f44"
+            android:text="×" />
+
+        <!-- Row 3 -->
+        <Button
+            android:id="@+id/btn4"
+            android:backgroundTint="#3e3f44"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:backgroundTint="#3e3f44"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:backgroundTint="#3e3f44"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btnSubtract"
+            android:backgroundTint="#3e3f44"
+            android:text="−" />
+
+        <!-- Row 4 -->
+        <Button
+            android:id="@+id/btn1"
+            android:backgroundTint="#3e3f44"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:backgroundTint="#3e3f44"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:backgroundTint="#3e3f44"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:backgroundTint="#3e3f44"
+            android:text="+" />
+
+        <!-- Row 5 -->
+        <Button
+            android:id="@+id/btn0"
+            android:backgroundTint="#3e3f44"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btnDot"
+            android:backgroundTint="#3e3f44"
+            android:text="." />
+
+        <Button
+            android:id="@+id/btnEquals"
+            android:layout_columnSpan="2"
+            android:backgroundTint="#006400"
+            android:text="=" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/logTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logged Costs/Calculations:"
+        android:textColor="#101011"
+        android:textSize="25sp"
+        />
+
+    <TextView
+        android:id="@+id/tvLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#101011"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:background="@drawable/log_textview"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
+
