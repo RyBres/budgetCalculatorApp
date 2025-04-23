@@ -4,13 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#d3d4d7">
+    android:background="@drawable/background3d">
 
     <TextView
         android:id="@+id/title"
+        android:paddingTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Budget Calculator"
+        android:text="💰 Budget Calculator"
+        android:textStyle="bold"
         android:textColor="#101011"
         android:textSize="25sp"
         />
@@ -72,8 +74,10 @@
 
         <Button
             android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:backgroundTint="#3e3f44"
-            android:text="←" />
+            android:text="👈"/>
 
         <Button
             android:id="@+id/btnPercent"
@@ -149,19 +153,31 @@
             android:text="+" />
 
         <!-- Row 5 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_column="0"
+            android:layout_row="4" />
+
         <Button
             android:id="@+id/btn0"
+            android:layout_column="1"
+            android:layout_row="4"
             android:backgroundTint="#3e3f44"
             android:text="0" />
 
         <Button
             android:id="@+id/btnDot"
+            android:layout_column="2"
+            android:layout_row="4"
             android:backgroundTint="#3e3f44"
             android:text="." />
 
         <Button
             android:id="@+id/btnEquals"
-            android:layout_columnSpan="2"
+            android:layout_column="3"
+            android:layout_row="4"
+            android:layout_columnSpan="1"
             android:backgroundTint="#006400"
             android:text="=" />
 
@@ -172,6 +188,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Logged Costs/Calculations:"
+        android:textStyle="bold"
         android:textColor="#101011"
         android:textSize="25sp"
         />
@@ -186,6 +203,13 @@
         android:padding="12dp"
         android:background="@drawable/log_textview"
         android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/btnClearLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8B0000"
+        android:text="Clear Log" />
 
 </LinearLayout>
 

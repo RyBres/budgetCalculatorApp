@@ -53,6 +53,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnClear).setOnClickListener {
             expression = ""
             input.text = "0"
+        }
+
+        findViewById<Button>(R.id.btnClearLog).setOnClickListener {
             entryList.clear()
             logText.text = ""
         }
@@ -79,8 +82,8 @@ class MainActivity : AppCompatActivity() {
         val cleanedExpr = expr
             .replace("×", "*")
             .replace("÷", "/")
-            .replace("−", "-") // Replace Unicode minus with regular minus
-            .replace("%", "/100") // Convert percent to math expression
+            .replace("−", "-")
+            .replace("%", "/100")
 
         return try {
             object : Any() {
